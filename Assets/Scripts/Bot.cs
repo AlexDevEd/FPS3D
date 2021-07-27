@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using TPS3D.Interfaces;
 using UnityEngine;
-using TPS.Objects;
-using Assets.Scripts.Interfaces;
 
-namespace Assets.Scripts
+namespace TPS3D
 {
     public class Bot : BaseObjectScene, ISetDamage
     {

@@ -1,37 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
-using TPS.Controller;
+using TPS3D.Controllers;
+using TPS3D.Helper;
 using UnityEngine;
 
-public class Main : MonoBehaviour
+namespace TPS3D
 {
-    private GameObject _controllersGameObject;
-    private InputController _inputController;
-    private FlashlightController _flashlightController;
-
-    private static Main _instance;
-    public static Main Instance { get; private set; }
-
-    void Start()
+    public class Main : MonoBehaviour
     {
-        Instance = this;
-        _controllersGameObject = new GameObject { name = "Controllers" };
-        _inputController = _controllersGameObject.AddComponent<InputController>();
-        _flashlightController = _controllersGameObject.AddComponent<FlashlightController>();
-    }
+        private GameObject _controllersGameObject;
+        private InputController _inputController;
+        private FlashlightController _flashlightController;
+        private WeaponsController _weaponsController; 
+        private ObjectManager _objectManager;
 
-    public FlashlightController GetFlashlightController
-    {
-        get { return _flashlightController; }
-    }
+        public enum MouseButton 
+        { 
+            LeftButton,
+            RightButton,
+            CenterButton 
+        }
 
-    public InputController GetInputController
-    {
-        get { return _inputController; }
-    }
+        private static Main _instance;
+        public static Main Instance { get; private set; }
 
-    void Update()
-    {
+        void Start()
+        {
+            Instance = this;
+            _controllersGameObject = new GameObject { name = "Controllers" };
+            _inputController = _controllersGameObject.AddComponent<InputController>();
+            _flashlightController = _controllersGameObject.AddComponent<FlashlightController>();
+            _weaponsController = _controllersGameObject.AddComponent<WeaponsController>();
+            _objectManager = GetComponent<ObjectManager>();
+        }
 
+        public FlashlightController GetFlashlightController
+        {
+            get { return _flashlightController; }
+        }
+
+        public InputController GetInputController
+        {
+            get { return _inputController; }
+        }
+
+        public WeaponsController GetWeaponsController
+        {
+            get { return _weaponsController; }
+        }
+        public ObjectManager GetObjectManager
+        {
+            get { return _objectManager; }
+        }
     }
 }

@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Ammunition : MonoBehaviour
+namespace TPS3D
 {
-
-    void Start()
+    public abstract class Ammunition : BaseObjectScene
     {
-        
-    }
 
-    void Update()
-    {
-        
+        void Start()
+        {
+
+        }
+
+        void Update()
+        {
+
+        }
     }
 }

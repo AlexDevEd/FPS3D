@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TPS.Controller
+namespace TPS3D.Controllers
 {
     public abstract class BaseController : MonoBehaviour
     {

@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-namespace TPS.Objects
-{
+namespace TPS3D
+{ 
     public abstract class BaseObjectScene : MonoBehaviour
     {
         #region ObjectFields
