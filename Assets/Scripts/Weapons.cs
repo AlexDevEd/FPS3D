@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.Scripts.Helper;
+using TPS3D.Helper;
 
-namespace TPS.Objects
+namespace TPS3D
 {
     public abstract class Weapons : BaseObjectScene
     {
         [SerializeField] protected Transform _gun;
-        [SerializeField] protected float _force = 500f;
+        [SerializeField] protected float _force = 5f;
         [SerializeField] protected float _rechargeTime = 0.2f;
 
         protected Timer _recharge = new Timer();

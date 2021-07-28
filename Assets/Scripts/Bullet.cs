@@ -1,12 +1,12 @@
-using Assets.Scripts;
-using Assets.Scripts.Interfaces;
+
 using System.Collections;
 using System.Collections.Generic;
+using TPS3D.Interfaces;
 using UnityEngine;
 
-namespace TPS.Objects
+namespace TPS3D
 {
-    public class Bullet : BaseObjectScene , ISetDamage
+    public class Bullet : Ammunition
     {
         [SerializeField] private float _timeToDestruct = 10f;
         [SerializeField] private float _damage = 20f;
@@ -30,7 +30,7 @@ namespace TPS.Objects
         {
 
         }
-        private void OnCollisionEnter(Collision collision)
+        public void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.tag == "Bullet") return;
 
@@ -41,13 +41,8 @@ namespace TPS.Objects
 
         private void SetDamage(ISetDamage obj)
         {
-            if(obj != null)
+            if (obj != null)
                 obj.ApplyDamage(_currentDamage);
-        }
-
-        public void ApplyDamage(float damage)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
