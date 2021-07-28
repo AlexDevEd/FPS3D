@@ -15,10 +15,10 @@ namespace TPS3D
             {
                 if (ammunition)
                 {
-                     Bullet tempBullet = Instantiate(ammunition, _gun.position, _gun.rotation) as Bullet;
+                     Bullet tempBullet = Instantiate(ammunition, _bulletSpawn.position, _bulletSpawn.rotation) as Bullet;
                     if (tempBullet)
                     {
-                        tempBullet.GetRigidbody.AddForce(_gun.forward * _force);
+                        tempBullet.GetRigidbody.AddForce(_bulletSpawn.forward * _force);
                         tempBullet.Name = "Bullet";
                         _fire = false;
                         _recharge.Start(_rechargeTime);

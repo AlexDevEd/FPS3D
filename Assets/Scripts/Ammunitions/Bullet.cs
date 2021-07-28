@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using TPS3D.Interfaces;
@@ -32,10 +31,11 @@ namespace TPS3D
         }
         public void OnCollisionEnter(Collision collision)
         {
+            Debug.Log(collision.gameObject.name);
             if (collision.collider.tag == "Bullet") return;
 
             SetDamage(collision.gameObject.GetComponent<ISetDamage>());
-
+            
             Destroy(InstanceObject);
         }
 
