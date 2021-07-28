@@ -6,7 +6,7 @@ namespace TPS3D
 {
     public abstract class Weapons : BaseObjectScene
     {
-        [SerializeField] protected Transform _bulletSpawn;
+        [SerializeField] protected Transform _gun;
         [SerializeField] protected float _force = 5f;
         [SerializeField] protected float _rechargeTime = 0.2f;
 

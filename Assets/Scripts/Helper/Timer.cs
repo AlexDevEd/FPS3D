@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TPS3D.Helper
+namespace Assets.Scripts.Helper
 {
     public sealed class Timer
     {
