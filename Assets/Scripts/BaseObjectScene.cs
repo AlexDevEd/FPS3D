@@ -138,7 +138,7 @@ namespace TPS3D
 
         private void AskColor(Transform obj, Color color)
         {
-            obj.gameObject.GetComponent<Material>().color = color;
+            obj.gameObject.GetComponent<Renderer>().material.color = color;
             if(obj.childCount > 0)
             {
                 foreach (Transform child in obj)
