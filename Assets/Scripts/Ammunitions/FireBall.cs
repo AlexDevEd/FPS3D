@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class FireBall : BaseObjectScene
 {
-    public float speed = 2.0f;
-    public int damage = 1;
+    public float speed = 20f;
+    public float damage = 20;
 
     void Update()
     {
@@ -16,8 +16,8 @@ public class FireBall : BaseObjectScene
     {
         PlayerCharacter player = other.GetComponent<PlayerCharacter>();
         if (player != null)
-        { 
-            Debug.Log("Player hit"); 
+        {
+            player.ApplyDamage(damage);
         }
 
         Destroy(this.gameObject);
