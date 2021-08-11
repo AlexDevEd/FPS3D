@@ -11,7 +11,7 @@ namespace TPS3D
         private bool _isDead = false; 
         private float _step = 2f;
         void Update()
-        {
+        {   
             if (_isDead)
             {   
                     Destroy(InstanceObject.GetComponent<Collider>());

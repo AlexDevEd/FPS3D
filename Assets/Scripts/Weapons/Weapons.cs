@@ -7,7 +7,7 @@ namespace TPS3D
     {
         [SerializeField] protected Transform _bulletSpawn;
         [SerializeField] protected float _force = 5f;
-        [SerializeField] protected float _rechargeTime = 0.2f;
+        [SerializeField] protected float _rechargeTime = 1f;
 
         protected Timer _recharge = new Timer();
         protected bool _fire = true;
